@@ -1,0 +1,20 @@
+.navbar-bottom{
+    display:flex;
+    align-items: center;
+    gap:10px;
+    padding:10px;
+    list-style-type: none; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.356)
+};
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

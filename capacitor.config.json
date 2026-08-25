@@ -1,0 +1,10 @@
+{
+  "appId": "com.kioferta.br",
+  "appName": "kiOferta",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}
