@@ -1,21 +1,18 @@
-function renderNavbar() {
+function renderNavbar(rotas) {
+    console.log(rotas)
     const nav = document.querySelector("#navbar")
     nav.innerHTML = `
     <nav>
         <ul class="navbar-bottom">
-            <li>
-                <a href="#home" class="nav-icon">
-                    <i data-lucide="house"></i> 
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="#lista" class="nav-icon">
-                    <i data-lucide="badge-dollar-sign"></i> 
-                    Oferta
-                </a>
-            </li>
+            
+            ${
+                rotas.map((menu) => `<li><a href="${menu.url}" class="nav-icon">
+                <i data-lucide=${menu.icon}></i>
+                ${menu.label}</a></li>`)
+            }
+            
         </ul>
+        <i data-lucide="menu" class="menu"></i>  
     </nav>
     `
 }
