@@ -1,7 +1,7 @@
 function lista(app){
     app.innerHTML = `
     <div>
-        <h1>Página Inicial</h1>
+        <h1>Página lista</h1>
     </div>
     `
 }

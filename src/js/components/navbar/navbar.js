@@ -6,7 +6,7 @@ function renderNavbar(rotas) {
         <ul class="navbar-bottom">
             
             ${
-                rotas.map((menu) => `<li><a href="${menu.url}" class="nav-icon">
+                rotas.filter(menu => menu.label !== "").map((menu) => `<li><a href="${menu.url}" class="nav-icon">
                 <i data-lucide=${menu.icon}></i>
                 ${menu.label}</a></li>`)
             }

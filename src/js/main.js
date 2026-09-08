@@ -2,10 +2,21 @@ import { renderNavbar } from "./components/navbar/navbar.js";
 import {rotas} from './components/rotas/rotas.js';
 import { createIcons, icons } from 'lucide';
 
-
-
 renderNavbar(rotas);
-createIcons({icons});
 
 const app = document.querySelector("#app");
-app.innerHTML = "KiOferta";
+
+function renderAPP(){
+    const hash = window.location.hash || "#home"
+    const rota = rotas.find(tela => tela.url === hash)
+    if(rota){
+        rota.pagina(app)
+        createIcons({icons});
+    }else{
+        app.innerHTML = "Página não encontrada";
+    }
+};
+
+window.addEventListener("hashchange", renderAPP);
+
+renderAPP();
