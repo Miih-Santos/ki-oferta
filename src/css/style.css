@@ -1,5 +1,4 @@
-@import url('./pagina/buscar.css');
-@import url('./variaveis.css');
-@import url('./base.css');
+@import url('./navbar/variaveis.css');
+@import url('./navbar/base.css');
 @import url('./navbar/navbar.css');
-
+@import url('./navbar/paginas/buscar.css');

@@ -1,22 +1,24 @@
-import { renderNavbar } from "./components/navbar/navbar.js";
-import {rotas} from './components/rotas/rotas.js';
-import { createIcons, icons } from 'lucide';
-
-renderNavbar(rotas);
+import { createIcons, icons } from "lucide";
+import { renderNavbar } from "./componentes/navbar/navbar.js";
+import { rotas } from "./componentes/rotas/rotas.js";
 
 const app = document.querySelector("#app");
 
-function renderAPP(){
-    const hash = window.location.hash || "#home"
-    const rota = rotas.find(tela => tela.url === hash)
-    if(rota){
-        rota.pagina(app)
-        createIcons({icons});
-    }else{
-        app.innerHTML = "Página não encontrada";
+renderNavbar(rotas);
+
+function renderApp() {
+    const hash = window.location.hash || "#busca";
+    const rota = rotas.find(tela => tela.url === hash);
+
+    if (rota) {
+        rota.pagina(app);
+        createIcons({ icons });
+    } else {
+        app.innerHTML = "<p>Página não encontrada.</p>";
     }
-};
+}
 
-window.addEventListener("hashchange", renderAPP);
+window.addEventListener("hashchange", renderApp);
 
-renderAPP();
+createIcons({ icons });
+renderApp();

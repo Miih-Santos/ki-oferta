@@ -1,6 +1,6 @@
 {
-  "appId": "com.kioferta.br",
-  "appName": "kiOferta",
+  "appId": "com.kioferta.app",
+  "appName": "ki-oferta",
   "webDir": "dist",
   "plugins": {
     "SplashScreen": {
